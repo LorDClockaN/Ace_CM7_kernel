@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.32.36
- * Fri Apr 15 20:17:32 2011
+ * Fri Apr 15 21:33:44 2011
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_ANDROID 1
@@ -427,7 +427,7 @@
 #define CONFIG_VIRT_TO_BUS 1
 #define CONFIG_MD 1
 #define CONFIG_MSM_MDP40 1
-#define CONFIG_LOCALVERSION "-LorDmodV3.1.1-ck2-v363"
+#define CONFIG_LOCALVERSION "-LorDmodV3.1.3-ck2-BFSv363"
 #define CONFIG_ZLIB_INFLATE 1
 #define CONFIG_ARM_ERRATA_460075 1
 #define CONFIG_INIT_ENV_ARG_LIMIT 32
