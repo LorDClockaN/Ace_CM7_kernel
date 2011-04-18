@@ -249,22 +249,21 @@ accessed in
 
 	/proc/sys/kernel/rr_interval
 
-The value is in milliseconds, and the default value is set to 6 on a
-uniprocessor machine, and automatically set to a progressively higher value on
-multiprocessor machines. The reasoning behind increasing the value on more CPUs
-is that the effective latency is decreased by virtue of there being more CPUs on
-BFS (for reasons explained above), and increasing the value allows for less
-cache contention and more throughput. Valid values are from 1 to 5000
-Decreasing the value will decrease latencies at the cost of decreasing
-throughput, while increasing it will improve throughput, but at the cost of
-worsening latencies. The accuracy of the rr interval is limited by HZ resolution
-of the kernel configuration. Thus, the worst case latencies are usually slightly
-higher than this actual value. The default value of 6 is not an arbitrary one.
-It is based on the fact that humans can detect jitter at approximately 7ms, so
-aiming for much lower latencies is pointless under most circumstances. It is
-worth noting this fact when comparing the latency performance of BFS to other
-schedulers. Worst case latencies being higher than 7ms are far worse than
-average latencies not being in the microsecond range.
+The value is in milliseconds, and the default value is set to 6ms. Valid values
+are from 1 to 1000. Decreasing the value will decrease latencies at the cost of
+decreasing throughput, while increasing it will improve throughput, but at the
+cost of worsening latencies. The accuracy of the rr interval is limited by HZ
+resolution of the kernel configuration. Thus, the worst case latencies are
+usually slightly higher than this actual value. BFS uses "dithering" to try and
+minimise the effect the Hz limitation has. The default value of 6 is not an
+arbitrary one. It is based on the fact that humans can detect jitter at
+approximately 7ms, so aiming for much lower latencies is pointless under most
+circumstances. It is worth noting this fact when comparing the latency
+performance of BFS to other schedulers. Worst case latencies being higher than
+7ms are far worse than average latencies not being in the microsecond range.
+Experimentation has shown that rr intervals being increased up to 300 can
+improve throughput but beyond that, scheduling noise from elsewhere prevents
+further demonstrable throughput.
 
 Isochronous scheduling.
 
