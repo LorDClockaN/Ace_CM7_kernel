@@ -3297,6 +3297,7 @@
 0x00000000	snd_soc_put_volsw	vmlinux	EXPORT_SYMBOL_GPL
 0x00000000	i2c_smbus_read_byte	vmlinux	EXPORT_SYMBOL
 0x00000000	mb_cache_entry_free	vmlinux	EXPORT_SYMBOL
+0x00000000	msm_get_voice_state	vmlinux	EXPORT_SYMBOL
 0x00000000	ethtool_op_get_flags	vmlinux	EXPORT_SYMBOL
 0x00000000	blkcipher_walk_phys	vmlinux	EXPORT_SYMBOL_GPL
 0x00000000	clocksource_change_rating	vmlinux	EXPORT_SYMBOL
