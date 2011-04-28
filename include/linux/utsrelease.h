@@ -1,1 +1,1 @@
-#define UTS_RELEASE "2.6.32.39-LorDmodV4.4BFS-VrI/O"
+#define UTS_RELEASE "2.6.32.39-LorDmodV4.5BFS-VrI/O"
